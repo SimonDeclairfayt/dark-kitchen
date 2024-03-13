@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.navbar{
+    display: flex;
+    margin: 16px;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 16px;
+    position: relative;
+}
+.menu__item{
+    list-style-type: none;
+    position: relative;
+}
+.btn{
+    padding: 4px;
+    background-color: #FFF;
+    border: none;
+    cursor: pointer;
+}
+.cart-container{
+    padding-left: 4px;
+    padding-right: 4px;
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    right: 0;
+    border-radius: 16px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cart-container .title{
+    padding: 12px 8px 12px 12px;
+    color: #10B981;
+}
+.meal-container{
+    display: flex;
+    flex-flow: column wrap;
+}
+.filter-container{
+    position: absolute;
+    width: 220px;
+    right: 0;
+    border-radius: 12px;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.filter-container h2{
+    font-size: 16px;
+    margin:10px;
+}
+.tags-container{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 20px 24px 12px;
+    gap: 8px
+
+}
+.tags-container li{
+    list-style-type: none;
+}
+.tags{
+    padding: 4px;
+    color: #047857;
+    background-color: #ECFDF5;
+    font-size: 8px;
+    font-weight: 300;
+    border-radius: 4px;
+}
+.tags.active{
+    color: #FFF;
+    background-color: #047857;
+}
+svg .filter-active{
+    fill: #047857;
+}
+.none{
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+}
+.img-banner{
+    width: 100%;
+    position: relative
+}
+
+.banner-section{
+    position: relative;
+}
+.section-order::before{
+    content: "";
+    width: 100%;
+    background-color: #fff;
+    height:31px;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    border-radius: 16px 16px 0 0;
+}
+.section-order{
+    position: relative;
+    z-index: 9;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #fff;
+    margin-top: -12px;
+    border-radius: 16px 16px 0 0;
+}
+.subtext{
+    color: #A3A3A3;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.title{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+.title span{
+    color: #10B981;
+}
+.cards{
+    border: 0.2px solid rgba(43, 43, 43, 0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 16px;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.meal{
+    display: flex;
+    flex-flow: row nowrap;
+    border: 0.2px solid rgba(43, 43, 43, 0.3);
+    padding: 4px;
+    border-radius: 16px;
+    margin-top: 8px;
+}
+.meal .card-img{
+    width: 59px;
+    height: auto;
+}
+.mealText-container{
+    margin-top: 8px;
+    display: flex;
+    flex-flow: column wrap;
+}
+.meal-title{
+    padding: 8px 0px 4px 14px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.meal-price{
+    font-size: 16px;
+    font-weight: 400;
+    color: #10B981;
+    padding-left: 14px;
+}
+.cards:first-of-type{
+    margin-top: 16px;
+}
+.card-img{
+    width: 80px;
+    height: 112px;
+    border-radius: 16px;
+    padding: 8px 0 8px 8px;
+    object-fit: cover;
+}
+.card-info{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+.card-description{
+    font-size: 8px;
+    font-weight: 300;
+    color: #A3A3A3;
+    max-width: 174px;
+}
+.card-title{
+    margin-top: 8px;
+}
+.card-tags{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+}
+.card-button{
+    align-self: flex-end;
+    margin-right: 5px;
+    padding-bottom: 8px;
+}
+.price{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-right: 6px;
+    text-align: right;
+}
+.btnAdd{
+    padding: 6px 12px;
+    background-color: #10B981;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 8px;
+}
+.displayNone{
+    display: none;
+}

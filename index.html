@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Kitchen</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img
+          class="active"
+          src="assets/img/logo.svg"
+          alt="Logo of the website"
+        />
+        <ul class="menu">
+          <li class="menu__item">
+            <button class="btn" id="filter">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  id="filter-color"
+                  d="M10.2293 11.852C10.2293 11.576 10.0053 11.352 9.72931 11.352H6.28931C6.01331 11.352 5.78931 11.576 5.78931 11.852C5.78931 12.128 6.01331 12.352 6.28931 12.352H9.72931C10.0053 12.352 10.2293 12.128 10.2293 11.852ZM11.7 9.18534C11.7 8.90934 11.476 8.68534 11.2 8.68534H4.80265C4.52665 8.68534 4.30265 8.90934 4.30265 9.18534C4.30265 9.46134 4.52665 9.68534 4.80265 9.68534H11.2C11.476 9.68534 11.7 9.46134 11.7 9.18534ZM13.3333 6.51867C13.3333 6.24267 13.1093 6.01867 12.8333 6.01867H3.16665C2.89065 6.01867 2.66665 6.24267 2.66665 6.51867C2.66665 6.79467 2.89065 7.01867 3.16665 7.01867H12.8333C13.1093 7.01867 13.3333 6.79467 13.3333 6.51867ZM14.6666 3.85201C14.6666 3.57601 14.4426 3.35201 14.1666 3.35201H1.83331C1.55731 3.35201 1.33331 3.57601 1.33331 3.85201C1.33331 4.12801 1.55731 4.35201 1.83331 4.35201H14.1666C14.4426 4.35201 14.6666 4.12801 14.6666 3.85201Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+            <div class="filter-container none">
+              <h2>Select tags to filter with</h2>
+              <ul class="tags-container">
+                <li>
+                  <button id="filter-button" class="btn tags">
+                    Salted Food
+                  </button>
+                </li>
+                <li>
+                  <button id="filter-button" class="btn tags">
+                    Sweet Food
+                  </button>
+                </li>
+                <li>
+                  <button id="filter-button" class="btn tags">Healthy</button>
+                </li>
+                <li>
+                  <button id="filter-button" class="btn tags">
+                    Comfort Food
+                  </button>
+                </li>
+                <li>
+                  <button id="filter-button" class="btn tags">
+                    Pescaterian
+                  </button>
+                </li>
+                <li>
+                  <button id="filter-button" class="btn tags">
+                    Vegetarian
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <button id="cart" class="btn">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  id="cart-color"
+                  d="M3.03933 4.66666L6.17333 1.53199C6.30533 1.39999 6.47933 1.33333 6.65333 1.33333C7.062 1.33333 7.33333 1.66999 7.33333 2.01933C7.33333 2.18599 7.272 2.35533 7.134 2.49333L4.96067 4.66666H3.03933ZM11.0393 4.66666H12.9613L9.82667 1.53199C9.69467 1.39999 9.52067 1.33333 9.34667 1.33333C8.938 1.33333 8.66667 1.66999 8.66667 2.01933C8.66667 2.18599 8.728 2.35533 8.866 2.49333L11.0393 4.66666ZM13.508 7.33333L13.4973 7.36066L11.0987 13.3333H4.90133L2.50333 7.35933L2.49267 7.33333H13.508ZM16 5.99999H0V7.33333H0.428667C0.785333 7.33333 1.10933 7.53599 1.266 7.85599L4 14.6667H12L14.7347 7.85733C14.8907 7.53666 15.216 7.33333 15.572 7.33333H16V5.99999ZM6.66667 9.33333C6.66667 8.96533 6.36867 8.66666 6 8.66666C5.63133 8.66666 5.33333 8.96533 5.33333 9.33333V11.3333C5.33333 11.7013 5.63133 12 6 12C6.36867 12 6.66667 11.7013 6.66667 11.3333V9.33333ZM8.66667 9.33333C8.66667 8.96533 8.36867 8.66666 8 8.66666C7.63133 8.66666 7.33333 8.96533 7.33333 9.33333V11.3333C7.33333 11.7013 7.63133 12 8 12C8.36867 12 8.66667 11.7013 8.66667 11.3333V9.33333ZM10.6667 9.33333C10.6667 8.96533 10.3687 8.66666 10 8.66666C9.63133 8.66666 9.33333 8.96533 9.33333 9.33333V11.3333C9.33333 11.7013 9.63133 12 10 12C10.3687 12 10.6667 11.7013 10.6667 11.3333V9.33333Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+            <div class="cart-container none">
+              <h2 class="title">Your cart :</h2>
+              <div class="meal-container"></div>
+              <h2 class="title">Your Total is : <span class="total"></span></h2>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="banner-section">
+        <img
+          class="img-banner"
+          src="assets/img/banner.jpg"
+          alt="A cool picture of what we propose at brunch"
+        />
+        <div class="white-background"></div>
+      </section>
+      <section class="section-order">
+        <h1>Order online at Branché</h1>
+        <p class="subtext">Get an sms when your order is ready</p>
+        <div class="cardList">
+          <h2 class="title">Our <span>Salted Food</span></h2>
+          <div class="cards" id="1">
+            <img class="card-img" src="assets/img/salmon-toast.jpg" alt="" />
+            <div class="card-info">
+              <h2 class="title card-title">Salmon Toast</h2>
+              <p class="card-description">
+                A couple of salmon pieces on top of our homemade Rye Bread with
+                our guacamole on top and a poached egg.
+              </p>
+              <div class="card-tags">
+                <p class="tags">Comfort Food</p>
+                <p class="tags">Healthy</p>
+                <p class="tags">Pescaterian</p>
+              </div>
+            </div>
+            <div class="card-button">
+              <h3 class="price">8,5€</h3>
+              <button class="btn btnAdd">Add to cart</button>
+            </div>
+          </div>
+          <div class="cards" id="2">
+            <img class="card-img" src="assets/img/Eggs-Florentine.jpg" alt="" />
+            <div class="card-info">
+              <h2 class="title card-title">Eggs Florentine</h2>
+              <p class="card-description">
+                Poached eggs on toasted English muffins with creamy spinach and
+                hollandaise sauce.
+              </p>
+              <div class="card-tags">
+                <p class="tags">Vegetarian</p>
+                <p class="tags">Pescaterian</p>
+              </div>
+            </div>
+            <div class="card-button">
+              <h3 class="price">12€</h3>
+              <button class="btn btnAdd">Add to cart</button>
+            </div>
+          </div>
+          <div class="cards" id="3">
+            <img class="card-img" src="assets/img/Savory-pancakes.jpg" alt="" />
+            <div class="card-info">
+              <h2 class="title card-title">Savory Pancakes</h2>
+              <p class="card-description">
+                Buckwheat pancakes topped with smoked salmon, goat cheese, and a
+                drizzle of maple syrup.
+              </p>
+              <div class="card-tags">
+                <p class="tags">Comfort Food</p>
+              </div>
+            </div>
+            <div class="card-button">
+              <h3 class="price">15€</h3>
+              <button class="btn btnAdd">Add to cart</button>
+            </div>
+          </div>
+          <div class="cards" id="4">
+            <img
+              class="card-img"
+              src="assets/img/breakfast-burrito.jpg"
+              alt=""
+            />
+            <div class="card-info">
+              <h2 class="title card-title">Breakfast Burrito</h2>
+              <p class="card-description">
+                Scrambled eggs, chorizo sausage, black beans, cheese, and salsa
+                wrapped in a warm tortilla.
+              </p>
+              <div class="card-tags">
+                <p class="tags">Comfort Food</p>
+              </div>
+            </div>
+            <div class="card-button">
+              <h3 class="price">12€</h3>
+              <button class="btn btnAdd">Add to cart</button>
+            </div>
+          </div>
+          <div class="cards" id="5">
+            <img
+              class="card-img"
+              src="assets/img/breakfast-quesadilla.jpg"
+              alt=""
+            />
+            <div class="card-info">
+              <h2 class="title card-title">Breakfast Quesadilla</h2>
+              <p class="card-description">
+                Melted cheese, scrambled eggs, and your choice of fillings like
+                bacon, chorizo, or veggies in a warm tortilla.
+              </p>
+              <div class="card-tags">
+                <p class="tags">Vegetarian</p>
+                <p class="tags">Pescaterian</p>
+              </div>
+            </div>
+            <div class="card-button">
+              <h3 class="price">10€</h3>
+              <button class="btn btnAdd">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
